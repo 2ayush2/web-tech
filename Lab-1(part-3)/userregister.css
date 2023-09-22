@@ -1,0 +1,73 @@
+body{
+    background-color: #FFF5E0;
+}
+.userlogin-form{
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.userlogin-form h1{
+    font-size: 24px;
+    font-weight: 800;
+    padding-bottom: 24px;
+    
+
+}
+.userlogin-form form{
+    width: 300px;
+}
+.userlogin-form form .input-group{
+display: flex;
+flex-direction: column;
+
+}
+.userlogin-form form .input-group input{
+border-radius: 6px;
+padding: 12px 8px;
+margin: 8px 0;
+box-sizing: border-box;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+border: none;
+
+}
+.userlogin-form form input:focus{
+    outline: none;
+}
+.userlogin-form form .submitBtn{
+    padding: 12px;
+    width: 100%;
+    background-color: #141E46;
+    border: none;
+    color: #FFF5E0;
+    border-radius: 6px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+#tableData{
+    display: none;
+    padding-top: 24px;
+    border-top:  1px solid whitesmoke;
+    padding-top: 24px;
+}
+/**USER TABLE**/
+#tableData h2{
+    color: #141E46;
+    text-align: center;
+    
+}
+#user-table{
+    background-color: #12486B !important;
+    color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    border-collapse: collapse;
+    width: 50%;
+    padding: 24px;
+}
+#user-table td, #user-table th{
+    border: 1px solid #ddd;
+    padding: 16px;
+
+}
