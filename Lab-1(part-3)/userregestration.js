@@ -16,6 +16,7 @@ const email =newrow.insertCell(1);
 username.innerHTML=document.getElementById('username').value;
 email.innerHTML = document.getElementById('email').value;
 
+
 return false;
 
 
