@@ -3,10 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Login Form</title>
+    <style>
+      body {
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 8px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
   </head>
   <body>
-    <form action="formsubmit.php" onsubmit="return formvalidation()">
+    <form onsubmit="return formvalidation()">
       <label for="username">Username:</label>
       <input type="text" id="username" /><br /><br />
       <label for="password">password:</label>
@@ -16,14 +56,22 @@
   </body>
 
   <script>
-    function formvalidation() {
+    function formvalidation(event) {
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
-      if (username == "" && password == "") {
-        alert("Please enter the data");
-        return false;
+
+      if (username === "" || password === "") {
+        alert("Please enter both username and password");
+      } else {
+        var dbUsername = "user123";
+        var dbpassword = "pass123";
+
+        if (username === dbUsername && password === dbpassword) {
+          alert("Login successful!");
+        } else {
+          alert("Invalid username or password");
+        }
       }
-      return true;
     }
   </script>
 </html>
