@@ -1,0 +1,26 @@
+from Crypto.Hash import MD4
+
+text = 'Hello There'
+hashObject = MD4.new(text.encode('utf-8'))
+digest = hashObject.hexdigest()
+
+print("The hexadecimal equivalent of hash using MD4 is : ", end ="")
+print(digest)
+
+
+
+
+
+
+
+# Python 3 code to demonstrate the  working of MD5
+
+import hashlib
+
+# initializing string
+str2hash = "Master Kenobi"
+
+result = hashlib.md5(str2hash.encode())
+
+print("The hexadecimal equivalent of hash using MD5 is : ", end ="")
+print(result.hexdigest())

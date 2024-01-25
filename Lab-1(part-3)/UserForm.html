@@ -1,47 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="userregister.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Login</title>
-</head>
-<body>
+    <style>
+      body {
+        background-color: #fff5e0;
+      }
+      .userlogin-form {
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .userlogin-form h1 {
+        font-size: 24px;
+        font-weight: 800;
+        padding-bottom: 24px;
+      }
+      .userlogin-form form {
+        width: 300px;
+      }
+      .userlogin-form form .input-group {
+        display: flex;
+        flex-direction: column;
+      }
+      .userlogin-form form .input-group input {
+        border-radius: 6px;
+        padding: 12px 8px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border: none;
+      }
+      .userlogin-form form input:focus {
+        outline: none;
+      }
+      .userlogin-form form .submitBtn {
+        padding: 12px;
+        width: 100%;
+        background-color: #141e46;
+        border: none;
+        color: #fff5e0;
+        border-radius: 6px;
+        margin-top: 12px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
     <div class="userlogin-form">
-        <h1>User Regestration form</h1>
-        <form id="regestration-form" action="
-        ">
-    <div class="input-group">
-        <label for="username">Username :</label>
-        <input type="text" id="username" name="username" required>
-        
+      <h1>User Regestration form</h1>
+      <form
+        id="regestration-form"
+        action="
+        "
+      >
+        <div class="input-group">
+          <label for="username">Username :</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button class="submitBtn" type="submit">Register</button>
+      </form>
+      <hr />
     </div>
-    <div class="input-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div class="input-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <button class="submitBtn" type="submit">Register</button>
-    </form>
-    <hr>
-    <div id="tableData">
-        <h2>Registered Users</h2>
-        <table id="user-table">
-          
-                <tr>
-                    <th>Username</th>
-                    <th>Email</th>
-                </tr>
-          
-           
-        </table>
-    </div>
-   
-    </div>
-    
-    <script src="userregestration.js"></script>
-</body>
+  </body>
 </html>

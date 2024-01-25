@@ -25,16 +25,10 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    label {
-        display: block;
-        margin-bottom: 8px;
+    input[type="text"] {
+        height: 32px;
     }
 
-
-
-    input[type="radio"] {
-        margin-right: 5px;
-    }
 
     input[type="submit"] {
         background-color: #4caf50;
@@ -70,7 +64,6 @@
         <select id="class" name="class">
             <option value="1">Class 1</option>
             <option value="2">Class 2</option>
-            <!-- Add more class options as needed -->
         </select><br><br>
 
         <label for="rollnumber">Roll Number:</label>
@@ -80,7 +73,7 @@
         <select id="batch" name="batch">
             <option value="A">Batch A</option>
             <option value="B">Batch B</option>
-            <!-- Add more batch options as needed -->
+           
         </select><br><br>
 
         <input type="submit" value="Submit">
