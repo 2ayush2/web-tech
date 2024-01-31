@@ -1,15 +1,28 @@
 <?php
 $servername = 'localhost';
 $username = 'root';
-$password = 'root';
+$password = '';
 $dbname = 'Student';
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password);
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection error: " . $conn->connect_error);
+if (!$conn) {
+    die("Connection error: " . mysqli_connect_error());
+}
+
+// Create database if it doesn't exist
+$sqlCreateDatabase = "CREATE DATABASE IF NOT EXISTS $dbname";
+if (mysqli_query($conn, $sqlCreateDatabase)) {
+    echo "Database created successfully or already exists<br>";
+} else {
+    echo "Error creating database: " . mysqli_error($conn) . "<br>";
+}
+
+// Select the database
+if (!mysqli_select_db($conn, $dbname)) {
+    die("Failed to select database: " . mysqli_error($conn));
 }
 
 // SQL to create table 'Class'
